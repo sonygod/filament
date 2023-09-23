@@ -16,3 +16,6 @@ settings.json
 test*.png
 test*.json
 results
+/build
+/CMakeFiles
+CMakeCache.txt
