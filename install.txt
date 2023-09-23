@@ -21,3 +21,13 @@ source ./emsdk_env.sh
 
 sudo apt install build-essential git subversion cmake libx11-dev libxxf86vm-dev libxcursor-dev libxi-dev libxrandr-dev libxinerama-dev libegl-dev
 sudo apt install libwayland-dev wayland-protocols libxkbcommon-dev libdbus-1-dev linux-libc-dev
+
+sudo update-alternatives --install /usr/bin/cc cc /usr/bin/clang 200
+sudo update-alternatives --install /usr/bin/c++ c++ /usr/bin/clang++ 200
+
+CC=clang CXX=clang++ cmake -G Ninja ../..
+
+which cc
+cc --version
+which c++
+c++ --version
