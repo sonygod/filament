@@ -225,6 +225,8 @@ function build_desktop_target {
             -DIMPORT_EXECUTABLES_DIR=out \
             -DCMAKE_BUILD_TYPE="$1" \
             -DCMAKE_INSTALL_PREFIX="../${lc_target}/filament" \
+            -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/clang \
+            -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/clang++ \
             ${SWIFTSHADER_OPTION} \
             ${EGL_ON_LINUX_OPTION} \
             ${MATDBG_OPTION} \
@@ -286,6 +288,9 @@ function build_webgl_with_target {
             -DCMAKE_BUILD_TYPE="$1" \
             -DCMAKE_INSTALL_PREFIX="../webgl-${lc_target}/filament" \
             -DWEBGL=1 \
+            -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/clang \
+            -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/clang++ \
+
             ../..
         ${BUILD_COMMAND} ${BUILD_TARGETS}
         )

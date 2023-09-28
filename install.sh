@@ -4,6 +4,8 @@ sudo apt-get install clang-14 -y
 sudo apt-get install libc++-14-dev libc++abi-14-dev -y
 sudo apt install build-essential git subversion cmake libx11-dev libxxf86vm-dev libxcursor-dev libxi-dev libxrandr-dev libxinerama-dev libegl-dev -y
 sudo apt install libwayland-dev wayland-protocols libxkbcommon-dev libdbus-1-dev linux-libc-dev -y
+export CMAKE_CXX_COMPILER=/usr/bin/clang++
+export CMAKE_C_COMPILER=/usr/bin/clang
 
 rm -rf /home/rock
 cd ~
